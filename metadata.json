@@ -1,0 +1,8 @@
+{
+  "name": "VY EDU AI – Trợ lý giảng dạy thông minh",
+  "description": "Trợ lý giảng dạy thông minh dành cho giáo viên và học sinh THPT – Cô Nguyễn Thị Minh Vy, Trường THPT số 1 Tuy Phước.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
