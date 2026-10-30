@@ -73,7 +73,21 @@ export const Storage = {
   },
   saveTeacherProfile: (profile: UserProfile): void => setItem(KEYS.TEACHER, profile),
 
-  getClasses: (): Classroom[] => getItem(KEYS.CLASSES, INITIAL_CLASSES),
+  getClasses: (): Classroom[] => {
+    const list = getItem(KEYS.CLASSES, INITIAL_CLASSES);
+    let updated = false;
+    const synced = list.map((c) => {
+      if (c.schoolYear === '2025 - 2026') {
+        updated = true;
+        return { ...c, schoolYear: '2026 - 2027' };
+      }
+      return c;
+    });
+    if (updated) {
+      setItem(KEYS.CLASSES, synced);
+    }
+    return synced;
+  },
   saveClasses: (classes: Classroom[]): void => setItem(KEYS.CLASSES, classes),
 
   getStudents: (): Student[] => getItem(KEYS.STUDENTS, INITIAL_STUDENTS),
@@ -91,7 +105,24 @@ export const Storage = {
   getResources: (): ResourceItem[] => getItem(KEYS.RESOURCES, INITIAL_RESOURCES),
   saveResources: (resources: ResourceItem[]): void => setItem(KEYS.RESOURCES, resources),
 
-  getEvidence: (): EvidenceRecord[] => getItem(KEYS.EVIDENCE, INITIAL_EVIDENCE),
+  getEvidence: (): EvidenceRecord[] => {
+    const list = getItem(KEYS.EVIDENCE, INITIAL_EVIDENCE);
+    let updated = false;
+    const synced = list.map((e) => {
+      if (e.title.includes('2025 - 2026')) {
+        updated = true;
+        return {
+          ...e,
+          title: e.title.replace('2025 - 2026', '2026 - 2027'),
+        };
+      }
+      return e;
+    });
+    if (updated) {
+      setItem(KEYS.EVIDENCE, synced);
+    }
+    return synced;
+  },
   saveEvidence: (evidence: EvidenceRecord[]): void => setItem(KEYS.EVIDENCE, evidence),
 
   getAssignments: (): Assignment[] => getItem(KEYS.ASSIGNMENTS, INITIAL_ASSIGNMENTS),

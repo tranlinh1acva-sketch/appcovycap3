@@ -74,7 +74,7 @@ export const DashboardModule: React.FC<DashboardProps> = ({
                 <span className="text-xs uppercase tracking-wider font-semibold text-rose-300 bg-rose-950/60 px-2.5 py-0.5 rounded border border-rose-800/40">
                   {user.school}
                 </span>
-                <span className="text-xs text-slate-400">Năm học 2025 - 2026</span>
+                <span className="text-xs text-slate-400">Năm học 2026 - 2027</span>
               </div>
               <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight mt-1">
                 Xin chào cô {user.name}! 👋

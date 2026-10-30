@@ -81,7 +81,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               {user.school}
             </span>
             <span className="text-xs text-slate-500 dark:text-slate-400">
-              Năm học 2025 - 2026
+              Năm học 2026 - 2027
             </span>
           </div>
         </div>

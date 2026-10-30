@@ -235,6 +235,16 @@ export const TeacherProfileModule: React.FC<TeacherProfileProps> = ({
             </div>
 
             <div>
+              <label className="block font-semibold mb-1">Năm học phụ trách</label>
+              <input
+                type="text"
+                disabled
+                value="Năm học 2026 - 2027"
+                className="w-full p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold"
+              />
+            </div>
+
+            <div className="sm:col-span-2">
               <label className="block font-semibold mb-1">Các lớp giảng dạy</label>
               <input
                 type="text"

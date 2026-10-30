@@ -162,7 +162,7 @@ app.post('/api/ai/slides', async (req: Request, res: Response) => {
               subtitle: `Môn: ${subject || 'Toán học'} · Lớp ${grade || '11'} · THPT số 1 Tuy Phước`,
               points: [
                 'Giáo viên giảng dạy: Nguyễn Thị Minh Vy',
-                'Năm học 2025 - 2026',
+                'Năm học 2026 - 2027',
               ],
               layout: 'title',
               notes: 'Chào mừng các em học sinh đến với tiết học hôm nay!',
